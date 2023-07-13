@@ -79,11 +79,23 @@ img {
     background-color: transparent;
     border: none;
     text-decoration: none;
+    cursor: pointer;
+    transition: color 0.4s ease;
+}
+
+.button:hover {
+    color: var(--black);
 }
 
 .button--green {
     color: #fff;
     background-color: var(--green);
+    transition: opacity 0.4s ease;
+}
+
+.button--green:hover {
+    color: #fff;
+    opacity: 0.8;
 }
 
 .button--circle {
@@ -107,6 +119,16 @@ img {
     display: block;
     width: 120px;
     height: 33px;
+    color: var(--black);
+    transition: opacity 0.4s ease;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.logo:active {
+    opacity: 0.6;
 }
 
 .logo__img {
@@ -124,12 +146,6 @@ img {
     padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
-}
-
-
-/* MAIN CONTENT */
-.main-content {
-    flex-grow: 1;
 }
 
 /* SITE HEADER */
@@ -166,6 +182,15 @@ img {
     font-weight: 700;
     color: var(--text-color);
     text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+.sitenav__link:hover {
+    color: var(--black);
+}
+
+.sitenav__link:active {
+    color: var(--green);
 }
 
 .site-header__buttons {
@@ -197,7 +222,6 @@ img {
 
     position: relative;
     display: flex;
-    height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -234,7 +258,6 @@ img {
 .hero__img {
     position: absolute;
     z-index: -1;
-    top: center;
     right: -288px;
 }
 
