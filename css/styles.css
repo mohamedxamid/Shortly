@@ -390,3 +390,21 @@ img {
     line-height: 26px;
 }
 
+/* CTA */
+.cta {
+    padding: 57px;
+    text-align: center;
+    background-image: url("../imgs/cta-bg-img.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.cta__title {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -1px;
+    font-weight: 700;
+    color: #fff;
+}
+
