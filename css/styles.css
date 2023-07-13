@@ -232,3 +232,54 @@ img {
     top: center;
     right: -288px;
 }
+
+/* MAIN CONTENT */
+.main-content {
+}
+
+/* FORM URL */
+.form-url {
+    font-size: 15px;
+    font-weight: 700;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 55px 65px;
+    border-radius: 10px;
+    background-color: var(--dark-blue);
+    display: flex;
+    align-items: center;
+    background-image: url("../imgs/form-bg-img.svg"),
+        url("../imgs/form-bg-img.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 29px left -134px, top -184px right -252px;
+}
+
+.form-url__input {
+    width: 100%;
+    padding: 12px 27px;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    margin-right: 25px;
+}
+
+.form-url__input:not(:placeholder-shown) {
+    border: 3px solid red;
+}
+
+.form-url__input:valid {
+    border:  3px solid var(--green);
+}
+
+.form-url__input::placeholder {
+    font-size: 20px;
+    line-height: 36px;
+    font-weight: 500;
+    letter-spacing: 0.15px;
+    color: var(--black);
+    opacity: 0.5;
+}
+
+.form-url__button {
+    white-space: nowrap;
+}
+
