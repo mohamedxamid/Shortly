@@ -82,19 +82,19 @@ img {
 }
 
 .button--circle {
-    border-radius: 28px;
+    border-radius: 30px;
 }
 
-.button-square {
-
+.button--square {
+    border-radius: 10px;
 }
 
 .button--large {
-    padding: 14px 40px;
+    padding: 15px 40px;
 }
 
 .button--small {
-    padding: 9px 24px;
+    padding: 10px 25px;
 }
 
 /* LOGO */
