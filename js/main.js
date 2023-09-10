@@ -1,6 +1,20 @@
+const modifiers = {
+    sitenavTogglerActive: "site-header__sitenav-toggler--active",
+    siteHeaderActive: "site-header--active"
+}
+
 const elUrlShortenerForm = document.querySelector('.js-url-shortener-form');
 const elUrlShortenerResults = document.querySelector('.url-shortener__results');
 const elUrlShortener = document.querySelector('.url-shortener');
+const elSiteHeader = document.querySelector('.site-header');
+const elSitenavToggler = elSiteHeader.querySelector('.site-header__sitenav-toggler');
+
+if (elSitenavToggler) {
+    elSitenavToggler.addEventListener('click', function () {
+        elSitenavToggler.classList.toggle(modifiers.sitenavTogglerActive);
+        elSiteHeader.classList.toggle(modifiers.siteHeaderActive);
+    })
+}
 
 if(elUrlShortenerForm) {
     elUrlShortenerForm.addEventListener('submit', function(evt) {

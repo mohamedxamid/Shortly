@@ -220,6 +220,7 @@ select:-webkit-autofill:focus {
 
 /* SITE HEADER */
 .site-header {
+    position: relative;
     padding-top: 48px;
     padding-bottom: 48px;
     background-color: #fff;
@@ -228,10 +229,65 @@ select:-webkit-autofill:focus {
 .site-header__container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .site-header__logo {
     margin-right: 45px;
+}
+
+.site-header__sitenav-menu {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.site-header__sitenav-toggler {
+    display: none;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.site-header__sitenav-toggler span,
+.site-header__sitenav-toggler span::before,
+.site-header__sitenav-toggler span::after {
+    position: absolute;
+    top: 50%; margin-top: -1px;
+    left: 50%; margin-left: -10px;
+    width: 20px;
+    height: 2px;
+    background-color: #222;
+}
+
+.site-header__sitenav-toggler span::before,
+.site-header__sitenav-toggler span::after {
+    content: "";
+    display: block;
+    transition: 0.3s;
+}
+
+.site-header__sitenav-toggler span::before {
+    transform: translateY(-5px);
+}
+
+.site-header__sitenav-toggler span::after {
+    transform: translateY(5px);
+}
+
+.site-header__sitenav-toggler--active span {
+    height: 0;
+}
+
+.site-header__sitenav-toggler--active span::before {
+    transform: rotate(45deg);
+}
+
+.site-header__sitenav-toggler--active span::after {
+    transform: rotate(-45deg);
 }
 
 .site-header__sitenav {
@@ -682,4 +738,50 @@ only screen and (                min-resolution: 2dppx) {
 
 /* Retina-specific stuff here */
 
+}
+
+@media only screen and (max-width: 800px) {
+    .site-header__sitenav-menu {
+        display: none;
+    }
+
+    .site-header--active .site-header__sitenav-menu {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 0px 20px;
+    }
+
+    .site-header__sitenav-toggler {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .site-header--active .site-header__sitenav-menu {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .site-header--active .site-header__sitenav {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    .site-header--active .site-header__auth {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .site-header--active .sitenav__list {
+        flex-direction: column;
+    }
+
+    .site-header--active .sitenav__item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
 }
