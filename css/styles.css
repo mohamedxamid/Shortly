@@ -605,6 +605,7 @@ select:-webkit-autofill:focus {
 .cta {
     padding-top: 57px;
     padding-bottom: 57px;
+    background-color: #3a3054;
     background-image: url("../imgs/cta-bg-img.png");
     background-repeat: no-repeat;
     background-position: center;
