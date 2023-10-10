@@ -654,7 +654,7 @@ select:-webkit-autofill:focus {
     display: flex;
 }
 
-.site-footer-menu:not(:last-child) {
+.site-footer__menu:not(:last-child) {
     margin-right: 94px;
 }
 
@@ -936,7 +936,7 @@ only screen and (                min-resolution: 2dppx) {
         text-align: center;
     }
 
-    .site-footer-menu:not(:last-child) {
+    .site-footer__menu:not(:last-child) {
         margin-right: 0;
         margin-bottom: 40px;
     }
