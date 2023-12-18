@@ -250,6 +250,7 @@ select:-webkit-autofill:focus {
     border: none;
     border-radius: 50%;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .site-header__sitenav-toggler span,
@@ -641,10 +642,10 @@ select:-webkit-autofill:focus {
 .site-footer__container {
     display: flex;
     align-items: flex-start;
+    gap: 30px;
 }
 
 .site-footer__logo {
-    margin-right: 30px;
     color: #fff;
 }
 
@@ -652,10 +653,7 @@ select:-webkit-autofill:focus {
     margin-left: auto;
     margin-right: 100px;
     display: flex;
-}
-
-.site-footer__menu:not(:last-child) {
-    margin-right: 94px;
+    gap: 90px;
 }
 
 .site-footer__menu-title {
@@ -736,9 +734,9 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
-
-/* Retina-specific stuff here */
-
+    
+    /* Retina-specific stuff here */
+    
 }
 
 @media only screen and (max-width: 1200px) {
@@ -751,31 +749,39 @@ only screen and (                min-resolution: 2dppx) {
     .hero {
         background-position: left calc(50% + 326px) top 30px;
     }
+    
+    .site-footer__menus {
+        margin-right: auto;
+    }
 }
 
 @media only screen and (max-width: 800px) {
     .site-header__sitenav-menu {
         display: none;
     }
-
+    
     .site-header--active .site-header__sitenav-menu-wrapper {
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
     }
-
+    
     .site-header--active .site-header__sitenav-menu {
         display: flex;
         padding: 0px 20px;
     }
-
+    
     .site-header__sitenav-toggler {
         display: block;
     }
-
+    
     .hero {
         background-position: left calc(50% + 170px) top 170%;
+    }
+    
+    .site-footer__menus {
+        gap: 35px;
     }
 }
 
@@ -783,10 +789,15 @@ only screen and (                min-resolution: 2dppx) {
     .url-shortener__form {
         flex-direction: column;
     }
-
+    
     .url-shortener__input-wrapper {
         margin-right: 0;
         margin-bottom: 16px;
+    }
+    
+    .site-footer__container {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -795,109 +806,109 @@ only screen and (                min-resolution: 2dppx) {
         padding-top: 40px;
         padding-bottom: 23px;
     }
-
+    
     .site-header--active .site-header__sitenav-menu {
         flex-direction: column;
         padding: 40px 24px;
         background-color: #3a3054;
         border-radius: 10px;
     }
-
+    
     .site-header--active .site-header__sitenav {
         margin-right: 0;
         margin-bottom: 16px;
         width: 100%;
     }
-
+    
     .site-header--active .site-header__auth {
         margin-left: 0;
         flex-direction: column;
         width: 100%;
         text-align: center;
     }
-
+    
     .site-header__login-link {
         margin-right: 0;
         margin-bottom: 24px;
         color: #fff;
     }
-
+    
     .site-header--active .site-header__auth .button{
         display: block;
         width: 100%;
     }
-
+    
     .site-header--active .sitenav__list {
         width: 100%;
         padding-bottom: 30px;
         border-bottom: 1px solid rgba(158, 154, 168, 0.25);
     }
-
+    
     .site-header--active .sitenav__item {
         text-align: center;
     }
-
+    
     .site-header--active .sitenav__link {
         color: #fff;
     }
-
+    
     .hero {
         background-position: left calc(50% + 55px) top 150%;
     }
-
+    
     .hero__inner {
         text-align: center;
     }
-
+    
     .url-shortener__form {
         padding: 24px;
     }
-
+    
     .url-shortener__input {
         padding: 6px 16px;
     }
-
+    
     .index-features {
         padding-top: 80px;
         padding-bottom: 80px;
     }
-
+    
     .index-features__top {
         width: 100%;
     }
-
+    
     .index-features__title {
         font-size: 28px;
         line-height: 48px;
     }
-
+    
     .index-features__top-info {
         font-size: 16px;
         line-height: 28px;
     }
-
+    
     .index-features__list {
         flex-direction: column;
     }
-
+    
     .index-features__item {
         width: 100%;
         max-width: 350px;
     }
-
+    
     .index-features__item:not(:last-child) {
         margin-right: 0;
     }
-
+    
     .index-features__item:not(:first-child) {
         margin-top: 92px;
     }
-
+    
     .index-feature__icon-wrapper {
         left: 50%;
         transform: translateX(-50%);
     }
-
+    
     .index-features__list::before {
         width: 8px;
         height: 100%;
@@ -905,28 +916,28 @@ only screen and (                min-resolution: 2dppx) {
         left: 50%;
         transform: translateX(-50%);
     }
-
+    
     .cta {
         padding-top: 90px;
         padding-bottom: 90px;
     }
-
+    
     .cta__title {
         font-size: 28px;
         line-height: 48px;
         margin-bottom: 16px;
     }
-
+    
     .site-footer__container {
         flex-direction: column;
         align-items: center;
     }
-
+    
     .site-footer__logo {
         margin-right: 0;
         margin-bottom: 50px;
     }
-
+    
     .site-footer__menus {
         flex-direction: column;
         align-items: center;
@@ -935,7 +946,7 @@ only screen and (                min-resolution: 2dppx) {
         margin-bottom: 48px;
         text-align: center;
     }
-
+    
     .site-footer__menu:not(:last-child) {
         margin-right: 0;
         margin-bottom: 40px;
@@ -946,24 +957,24 @@ only screen and (                min-resolution: 2dppx) {
     .site-header--active .sitenav__list {
         flex-direction: column;
     }
-
+    
     .site-header--active .sitenav__item:not(:last-child) {
         margin-right: 0;
         margin-bottom: 30px;
     }
-
+    
     .hero {
         padding-top: 397px;
         padding-bottom: 168px;
         background-position: left calc(50% + 85px) top 0%;
         background-size: 511px;
     }
-
+    
     .hero__title {
         font-size: 42px;
         line-height: 1.2;
     }
-
+    
     .hero__text {
         font-size: 18px;
         line-height: 30px;
